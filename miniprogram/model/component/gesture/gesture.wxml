@@ -1,0 +1,14 @@
+<!-- 手势滑动组件 -->
+<view 
+  class="inner {{isMove?'touch-move-active':''}}" 
+  data-num="1"
+  bindtouchstart="touchstart" 
+  bindtouchmove="touchmove"
+>
+  <view class="conent">
+    <slot name="conent"></slot>
+  </view>
+  <view class="sidebasr">
+    <slot name="sidebasr"></slot>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/myChilren/addsite/addsite.wxss */
+.form label{
+  display: flex;line-height: 100rpx;height: 100rpx;
+  padding: 0 5%;background-color: #fff;display: flex;
+}
+.form .even{
+  margin-top: 20rpx;
+}
+.form textarea{
+  background-color: #fff;
+}
+.form label input{
+  height: 100%;flex: 1;
+}
+.form label text{
+  margin-right: 30rpx;min-width: 120rpx;
+}
+.form label picker{
+  width: 100%;
+}
+.form label .picker{
+  display: flex;width: 100%;
+}
+.form label .picker .right{
+  flex: 1;
+}
+.place{
+  color: #777;
+}

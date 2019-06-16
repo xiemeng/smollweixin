@@ -1,0 +1,27 @@
+<!-- 订单结算 -->
+<view class='trolley'>
+    <!-- 购物车列表 -->
+    <view class="shopCar {{index == carList.length-1?'':'vue-1px-b'}}" wx:for="{{carList}}" wx:key="_id">
+      <view class="shopRight">
+        <image src='{{item.imgs}}'></image>
+        <view class='srMain'>
+          <p>{{item.name}} <text class='fr'>￥{{item.price}}</text></p>
+          <p class="srmAdd">
+            x{{item.nums}}
+          </p>
+        </view>
+      </view>
+    </view>
+    <!-- 买家留言 -->
+    <view class='buyer'><input placeholder='选填：买家留言,(50字以内)' maxlength='50'></input></view>
+    <!-- 价格计算 -->
+    <view class='countPrice'>
+      <view><text>商品总价</text><text class='fr'>￥{{allPrice}}</text></view>
+      <view><text>邮费</text><text class='fr markedness'>+ ￥{{postage}}</text></view>
+    </view>
+    <!-- 底部导航栏 -->
+    <view class="shopCarFoot">
+      <view class='sfconent markedness vue-1px-b'>实付款：<text>￥{{allPrice+postage}}</text></view>
+      <view class='sfright' bindtap='settlement'>提交订单</view>
+    </view>
+</view>

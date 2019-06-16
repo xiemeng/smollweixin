@@ -1,0 +1,7 @@
+<view class='invest' >
+    <view bindtap='addLogs'>增加</view>
+    <view bindtap='cahngeLogs'>{{userInfo.nickName}}改变</view>
+    <view bindtap='clearLogs'>清空</view>
+    <view bindtap='deleteLogs'>删除</view>
+    <view wx:for="{{logs}}" wx:key="index">{{item.value}}111</view>
+</view>

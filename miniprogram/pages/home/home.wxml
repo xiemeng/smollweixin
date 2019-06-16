@@ -1,0 +1,30 @@
+<view class='app'>
+<!--轮播图  -->
+  <swiper class='swipper' indicator-dots="{{car.indicatorDots}}" current="{{car.current}}" circular="{{car.circular}}" indicator-active-color="{{car.indicatorActiveColor}}" indicator-color="{{car.indicatorColor}}" autoplay="{{car.autoplay}}" interval="{{car.interval}}" duration="{{car.duration}}" bindchange="swiperChange">  
+    <block wx:for="{{imgUrls}}" wx:key="image">  
+      <swiper-item>  
+        <image src="{{item}}" model="aspectFit" style="width: {{imageWidth}}px;" bindload="imageLoad" />  
+      </swiper-item>  
+    </block>  
+  </swiper>
+<!--推荐产品  -->
+  <view class='recommend'>
+    <navigator url="/pages/classify/classify" >
+      <p class="title clear">
+        推荐产品
+        <!-- <text class='fr'>更多></text> -->
+      </p>
+    </navigator>
+      <ul class="dataList">
+        <li wx:for="{{commodityList}}" data-id="{{item._id}}" data-mid="{{item.id}}" class="vue-1px" wx:key="index" bindtap="tap">
+          <image src='{{item.imgs}}'></image>
+          <view class='listMain'>
+            <p class="titles b0b0b0">{{item.describe}}</p>
+            <p class="market">{{item.name}}</p>
+            <p class="price"><text>￥{{item.price}}</text><text class='b0b0b0'>原价{{item.linePrice}}</text></p>
+            <p class="clear b0b0b0 explain"><text>新上架</text><text class='fr'>销量:{{item.volume}}</text></p>
+          </view>
+        </li>
+      </ul>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+/* 这里的样式只应用于这个自定义组件 */
+.icon-gou{
+  color: red;
+}
+/* 购物车 */
+.trolley{
+  padding-bottom: 104rpx;
+}
+.shopCar{
+  display: flex;align-items: center;
+  background-color: #fff;padding: 20rpx 3%;
+}
+.shopCar .shopLeft{
+  margin-right: 20rpx;
+}
+.shopCar .shopLeft i{
+  font-size: 50rpx;
+}
+.shopCar .shopRight{
+  flex: 1;display: flex;
+}
+.shopCar .shopRight .srMain{
+  flex: 1;
+  display: flex;flex-direction: column;justify-content: space-around;
+}
+.shopCar .shopRight .srMain .icon-cha{
+  color: #ccc;font-size: 20px;
+}
+.shopCar .shopRight image{
+  width: 160rpx;height: 160rpx;border-radius: 5px;margin-right: 20rpx;
+}
+.shopCar .shopRight .srmAdd{
+  display: flex;
+  justify-content: space-between;align-items: center;
+}
+/* 购物车底部 */
+.shopCarFoot{
+  display: flex;justify-content: space-between;
+  align-items:center;background-color: #fff;
+  width: 100%;font-size: 34rpx;
+  position: fixed;left:0;bottom: 0;
+}
+.shopCarFoot i{
+  font-size: 50rpx;
+}
+.shopCarFoot .sfLeft{
+ margin-left: 5%;
+}
+.shopCarFoot .sfLeft text{
+  vertical-align: middle;font-size: 30rpx;margin-left: 10rpx;
+}
+.shopCarFoot .sfconent{
+ 
+}
+.shopCarFoot .sfright{
+  width: 30%;text-align: center;background-color: red;color: #fff;
+  padding: 30rpx 0;
+}
+
+/* 购物车为空的样式 */
+.empty{
+  text-align: center;
+  margin-top: 45%;
+}
+.empty text{
+  color: red;
+  text-decoration: underline ;
+}

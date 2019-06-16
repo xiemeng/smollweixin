@@ -1,0 +1,25 @@
+<view class='my'>
+    <!-- 未授权的情况下 -->
+    <button open-type='getUserInfo' bindgetuserinfo='getuserinfo' class='nouser' wx:if="{{!userInfo}}">
+      <i class="iconfont icon-weixin"></i>
+      用户授权
+    </button>
+    <block wx:if="{{userInfo}}">
+      <view class='header'>
+        <image src='{{avatarUrl}}' class='headimg'></image>
+        <open-data type="userNickName"></open-data>
+        <!-- <open-data type="userGender" lang="zh_CN"></open-data> -->
+      </view>
+      <ul class="tableList">
+        <navigator url='/pages/myChilren/purchase/index' hover-class="navigator-hover">
+          <li><i class="iconfont icon-bianji left"></i>购买记录<i class="iconfont icon-youjiantou fr"></i></li>
+        </navigator>
+        <navigator url='/pages/myChilren/address/index' hover-class="navigator-hover">
+          <li><i class="iconfont icon-shouhuodizhi left"></i>收货地址<i class="iconfont icon-youjiantou fr"></i></li>
+        </navigator>
+        <navigator url='/pages/myChilren/aboutUs/aboutUs' hover-class="navigator-hover">
+          <li><i class="iconfont icon-goumaijilu left"></i>关于我们<i class="iconfont icon-youjiantou fr"></i></li>
+        </navigator>
+      </ul>
+    </block>
+</view>

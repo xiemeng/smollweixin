@@ -1,0 +1,20 @@
+<!--右侧无箭头 -->
+<template name="listNone">
+ <view class="tui-menu-list wx-1px-t">
+ <navigator url="{{url}}">
+  <block>
+  <text>{{title}}</text>
+  </block>
+ </navigator>
+ </view>
+</template>
+<!--右侧有箭头 -->
+<template name="list">
+ <view class="tui-menu-list tui-youjiantou wx-1px-t">
+ <navigator url="{{url}}">
+  <block>
+  <text>{{title}}</text>
+  </block>
+ </navigator>
+ </view>
+</template>

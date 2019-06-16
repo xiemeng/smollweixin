@@ -1,0 +1,54 @@
+/* 购物车 */
+.trolley{
+  padding-bottom: 104rpx;
+}
+.shopCar{
+  display: flex;padding: 20rpx 3%;align-items: center;
+  background-color: #fff;
+}
+
+.shopCar .shopRight{
+  flex: 1;display: flex;
+}
+.shopCar .shopRight .srMain{
+  flex: 1;
+  display: flex;flex-direction: column;justify-content: space-around;
+}
+.shopCar .shopRight .srMain text{
+  color: #999;
+}
+.shopCar .shopRight image{
+  width: 160rpx;height: 160rpx;border-radius: 5px;margin-right: 20rpx;
+}
+.shopCar .shopRight .srmAdd{
+  text-align: right;color: #999;
+}
+/* 购物车底部 */
+.shopCarFoot{
+  display: flex;
+  align-items:center;background-color: #fff;
+  width: 100%;font-size: 34rpx;
+  position: fixed;left:0;bottom: 0;
+}
+.shopCarFoot .sfconent{
+      flex:1;text-align: center;
+}
+.shopCarFoot .sfright{
+  width: 30%;text-align: center;background-color: red;color: #fff;
+  padding: 30rpx 0;
+}
+/* 买家留言 */
+.buyer{
+  margin-top: 30rpx;
+}
+.buyer input{
+  background-color: #fff;padding: 20rpx 3%;
+}
+/* 价格列表 */
+.countPrice{
+  background-color: #fff;padding: 20rpx 3%;
+  margin-top: 30rpx;
+}
+.countPrice view{
+  line-height: 3;
+}

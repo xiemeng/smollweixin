@@ -1,0 +1,177 @@
+/**公共样式**/
+page{
+  background: #f6f6f6;font-size: 26rpx;
+  font-family:"微软雅黑",tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  color: #333;
+}
+ul,p,li{
+  display: block;
+}
+image{
+  display: inline-block;
+}
+.flex{
+  display: flex;
+}
+/*去除边框的一些默认样式  */
+button{
+  background-color: #fff;
+}
+button::after{
+   border: none; 
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.white{
+  color: #fff;
+}
+
+/*浮动和清除浮动  */
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clear{
+  overflow:hidden;
+  _zoom:1;
+}
+/*横条*/
+.bar{
+	width: 100%;height: 20rpx;
+	background-color: #fafafa;
+}
+/*一像素*/
+.vue-1px-b,.vue-1px-r,.vue-1px,.vue-1px-t,.vue-1px-l{
+	position: relative;
+}
+.vue-1px-l:before {      
+    content: " ";
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 1px;
+	  border-left: 1px solid currentColor;
+	  color: #dedede;
+	  height: 200%;
+	  transform-origin: left top;
+	  transform: scale(0.5);
+  }
+.vue-1px-b:before {      
+    content: " ";
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+	  width: 200%;
+	  border-bottom: 1px solid currentColor;
+	  color: #dedede;
+	  height: 1px;
+	  transform-origin: left top;
+	  transform: scale(0.5);
+  }
+.vue-1px-t:before {      
+      content: " ";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 200%;
+	  border-top: 1px solid currentColor;
+	  color: #dedede;
+	  height: 1px;
+	  transform-origin: left top;
+	  transform: scale(0.5);
+  }
+.vue-1px-r:before {      
+      content: " ";
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 1px;
+	  border-right: 1px solid currentColor;
+	  color: #dedede;
+	  height: 200%;
+	  transform-origin: left top;
+	  transform: scale(0.5);
+  }
+.vue-1px:before {      
+    content: " ";
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 200%;
+	  border: 1px solid currentColor;
+	  color: #dedede;
+	  height: 200%;
+	  transform-origin: left top;
+	  transform: scale(0.5);
+  }   
+ 
+/*特定样式  */
+textarea{
+  padding: 20rpx 5%;width: 100%;box-sizing: border-box;
+}
+.b0b0b0{
+  color: #666;
+}
+.markedness{
+  color: red;
+}
+/* 底部公共点击样式 */
+.newadd{
+  width: 100%;
+  position: absolute;bottom: 40rpx;
+}
+.newadd button{
+  width: 80%;border-radius: 30px;
+}
+.newadd .active{
+  background-color: #ccc;
+}
+/* 字体图标,采用的cdn模式 */
+@font-face {
+  font-family: 'iconfont';  /* project id 622584 */
+  src:url('//at.alicdn.com/t/font_622584_90rf2zc6hnq.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  vertical-align: middle;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gou:before { content: "\e612"; }
+
+.icon-yuancircle46:before { content: "\e75d"; }
+
+.icon-weixin:before { content: "\e697"; }
+
+.icon-service:before { content: "\e7bb"; }
+
+.icon-cha:before { content: "\e632"; }
+
+.icon-shouhuodizhi:before { content: "\e622"; }
+
+.icon-cart_icon:before { content: "\e658"; }
+
+.icon-youjiantou:before { content: "\e678"; }
+
+.icon-goumaijilu:before { content: "\e64d"; }
+
+.icon-wenhao:before { content: "\e725"; }
+
+.icon-bianji:before { content: "\e611"; }
+
+.icon-zhengpinbaozheng:before { content: "\e639"; }
+
+

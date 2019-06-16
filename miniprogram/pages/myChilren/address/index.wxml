@@ -1,0 +1,31 @@
+<view class='address'>
+  <!-- 存在收货地址 -->
+  <view wx:if="{{isPage}}">
+    <view wx:if="{{userinfo.length>=1}}">
+      <view class="wrapLi {{index == userinfo.length-1?'':'vue-1px-b'}}" wx:for="{{userinfo}}" wx:key="_id">
+        <gesture>
+          <view slot="conent" class='conent'>
+            <view class='cLeft vue-1px-r'>
+              <view class='cTop'><text>{{item.name}}</text><text class='tel'>{{item.tel}}</text></view>
+              <view>
+                <text wx:for="{{item.address}}" wx:for-item="item2" wx:key="{{index}}">{{item2}}</text>
+                <text>{{item.detailAdd}}</text>
+              </view>
+            </view>
+            <view class="cRight">
+            <navigator url="/pages/myChilren/addsite/addsite?_id={{item._id}}">
+              <i class="iconfont icon-bianji"></i>
+            </navigator>
+            </view>
+          </view>
+          <view data-id="{{item._id}}" data-index="{{index}}" slot="sidebasr" class='sidebasr' bindtap='deleteRess'>删除</view>
+        </gesture>
+      </view>
+    </view>
+    <!-- 无收货地址 -->
+    <view class='noadd' wx:else>还没有收货地址，赶紧去添加吧!</view>
+    <view class='newadd'>
+      <button type='primary' size="default" bindtap="addsite" class="{{isAll?'active':''}}">新增</button>
+    </view>
+  </view>
+</view>

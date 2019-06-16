@@ -1,0 +1,50 @@
+<!--pages/foodDetail/detail/detail.wxml-->
+<view class='detail'>
+<!-- 顶部轮播图 -->
+  <swiper class='swipper' indicator-dots="{{car.indicatorDots}}" current="{{car.current}}" circular="{{car.circular}}" indicator-active-color="{{car.indicatorActiveColor}}" indicator-color="{{car.indicatorColor}}" autoplay="{{car.autoplay}}" interval="{{car.interval}}" duration="{{car.duration}}" bindchange="swiperChange">  
+      <block wx:for="{{imgUrls}}" wx:key="image">  
+        <swiper-item>  
+          <image src="{{item}}" model="aspectFit" style="width: {{imageWidth}}px;" bindload="imageLoad" />  
+        </swiper-item>  
+      </block>  
+  </swiper>
+  <!-- 头部 -->
+  <view class='header'>
+    <view class='name'>{{datainfo.name}}</view>
+    <view class='describe'><text class='markedness'>￥{{datainfo.price}}</text> <text class='b0b0b0'>库存：{{datainfo.inventory}}</text><text class='b0b0b0'>销量：{{datainfo.volume}}</text></view>
+  </view>
+   <!-- 保证 -->
+   <view class='promise'>
+    <i class="iconfont icon-zhengpinbaozheng markedness"></i>
+    <text>正品保证</text>
+   </view>
+   <!-- 购买数量 -->
+   <view class='purchase'>
+      <view class="nums vue-1px-b">购买数量</view>
+      <gcount bindnumData="numData"></gcount>
+   </view>
+   <!-- 图文详情 -->
+   <view class='graphic'>
+    <view class="title">图文详情</view>
+    <image wx:for="{{datainfo.imgList}}" src="{{item}}" wx:key="index"></image>
+    <view class="introduce">{{datainfo.express}}</view>
+   </view>
+   <!-- 底部购物栏 -->
+   <ul class="shopping">
+      <li class="common">
+        <i class="iconfont icon-service"></i>
+        <p>客服</p>
+      </li>
+      <li class="common" bindtap="classify">
+          <i class="iconfont icon-cart_icon"></i>
+          <p>购物车</p>
+          <text>{{carNums}}</text>
+      </li>
+      <li class="addCar" bindtap="addCar">
+        加入购物车
+      </li>
+      <li class="mark">
+        立即购买
+      </li>
+   </ul>
+</view>

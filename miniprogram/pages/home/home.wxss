@@ -1,0 +1,52 @@
+/* 这里的样式只应用于这个自定义组件 */
+.inner {
+  color: red;
+}
+/*推荐产品  */
+.recommend{
+  padding: 0 5%;
+ 
+}
+.recommend .title{
+    line-height: 100rpx;
+  }
+.recommend .title .fr{
+  color: #b0b0b0;
+}
+.recommend .dataList{
+  display: flex;flex-wrap:wrap;
+}
+.recommend .dataList li{
+    width: 49%;height: 400rpx;margin-bottom:20rpx;
+    display: flex;flex-direction: column;
+}
+.recommend .dataList li:nth-child(2n){
+  margin-left: 2%;
+}
+.recommend .dataList li .listMain{
+  padding: 0 5%;
+}
+.recommend .dataList li .titles{
+  padding-top: 10rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.recommend .dataList li .listMain .market{
+    
+}
+.recommend .dataList li .listMain .price{
+    padding-top: 10rpx; color: #ff6446;
+    padding-bottom:10rpx;
+}
+.recommend .dataList li .listMain .price .b0b0b0{
+  padding-left: 30rpx;text-decoration:line-through;
+}
+.recommend .dataList li .listMain .explain{
+    padding-bottom:10rpx;
+}
+.recommend .dataList li image{
+    width: 100%;flex: 1;
+}

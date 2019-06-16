@@ -1,0 +1,41 @@
+/* 未授权样式 */
+.nouser{
+    width: 70%;border-radius: 30px;background-color: #1aad19;
+    color: #fff;height: 100rpx;line-height: 100rpx;
+    position: absolute;top: 50%;left: 50%;
+    transform: translate(-50%,-50%)
+}
+.nouser i{
+  font-size: 50rpx;
+  vertical-align: middle;
+  margin-right: 5rpx;
+}
+.nouser image{
+  width: 50rpx;height: 50rpx;
+  
+}
+/* 授权后 */
+
+  /* 头部样式 */
+  .header{
+    display: flex;align-items: center;padding: 10rpx 5%;
+    background-color: #fff;margin-top: 20rpx;
+  }
+  .headimg{
+    width: 100rpx;height: 100rpx;display:inline-block;
+    border-radius: 100px;margin-right: 40rpx;
+  }
+  /* 中间内容 */
+  .tableList{
+    margin-top: 70rpx;
+  }
+  .tableList li{
+    background-color: #fff;margin-top: 20rpx;
+    padding: 30rpx 5%;
+  }
+  .tableList li .left{
+    margin-right: 20rpx;color: #feaa00;
+  }
+  .navigator-hover li{
+    background-color: #ccc;
+  }

@@ -1,0 +1,22 @@
+.inner{
+  display: flex;justify-content: space-between;width: 100%;
+  overflow: hidden;
+}
+.inner .conent{
+  margin-left: -90px;
+  margin-right:0;width:100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+}
+.inner .sidebasr{
+  width: 90px;text-align: center;
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.touch-move-active .conent,.touch-move-active .sidebasr{
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}

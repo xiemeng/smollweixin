@@ -1,0 +1,9 @@
+<!-- 数量加减组件 -->
+<view class='gcounter'>
+  <view class="minus {{value<=min?'active':''}}" bindtap='mins'><span></span></view>
+  <text class='b'>{{value}}</text>
+  <view class="add {{value<=min?'':'active'}}" bindtap='adds'>
+    <span class='row'></span>
+    <span class='column'></span>
+  </view>
+</view>

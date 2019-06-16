@@ -1,0 +1,33 @@
+<view class='trolley'>
+    <!-- 购物车列表 -->
+    <view class="shopCar {{index == carList.length-1?'':'vue-1px-b'}}" wx:for="{{carList}}" wx:key="_id">
+      <view class='shopLeft'>
+        <i class="iconfont icon-gou" wx:if="{{item.isSelect}}" bindtap="close" data-index="{{index}}"></i>
+        <i class="iconfont icon-yuancircle46" wx:else bindtap="checked" data-index="{{index}}"></i>
+      </view>
+      <view class="shopRight">
+        <image src='{{item.imgs}}'></image>
+        <view class='srMain'>
+          <p>{{item.name}} <i class="iconfont icon-cha fr" bindtap="deleteFood" data-id="{{item._id}}" data-index="{{index}}"></i></p>
+          <p class="srmAdd">
+            <span class="markedness">￥{{item.price}}</span>
+            <gcount datas="{{item}}" index="{{index}}" bindnumData="numData" wrapValue="{{item.nums}}"></gcount>
+          </p>
+        </view>
+      </view>
+    </view>
+    <!-- 底部导航栏 -->
+    <view class="shopCarFoot" wx:if="{{carList.length>=1}}">
+      <view class='sfLeft' bindtap='selectAll'>
+        <i class="iconfont icon-gou" wx:if="{{isAllSelect}}"></i>
+        <i class="iconfont icon-yuancircle46" wx:else></i>
+        <text>全选</text>
+      </view>
+      <view class='sfconent'>合计：<text class="markedness">￥{{allPrice}}</text></view>
+      <view class='sfright' bindtap='settlement'>结算</view>
+    </view>
+    <!-- 购物车为空 -->
+    <view wx:if="{{carList.length<=0}}" class="empty">
+      暂无商品,<text bindtap="classify">快去添加吧</text>   
+    </view>
+</view>

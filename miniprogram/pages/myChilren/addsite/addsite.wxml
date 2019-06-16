@@ -1,0 +1,25 @@
+<!--pages/myChilren/addsite/addsite.wxml-->
+<view class='addsite'>
+    <form bindsubmit="formSubmit" bindreset="formReset" class="form">
+      <label class='vue-1px-b even'>
+        <text>姓名</text><input value="{{userinfo.name}}" name="name" placeholder="请输入姓名"></input>
+      </label>
+      <label>
+        <text>手机号码</text><input value="{{userinfo.tel}}" bindinput="bindinput" name="tel" placeholder="手机号码" type="number" maxlength='11'></input>
+      </label>
+      <label class='vue-1px-b even'>
+        <picker mode="region" bindchange="bindRegionChange" value="{{userinfo.address}}" name="address">
+          <view class="picker">
+            <text class='left'>地址</text>
+            <text class='right' wx:if="{{userinfo.address.length>0}}">{{userinfo.address[0]}}，{{userinfo.address[1]}}，{{userinfo.address[2]}}</text>
+            <text class='right place' wx:else>请选择</text>
+          </view>
+        </picker>
+      </label>
+        <textarea placeholder='请输入详细地址' value="{{userinfo.detailAdd}}" name="detailAdd"></textarea>
+      <view class='newadd'>
+        <button type='primary' size="default" formType="submit">确定</button>
+      </view>
+    </form>
+</view>
+

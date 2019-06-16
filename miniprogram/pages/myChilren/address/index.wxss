@@ -1,0 +1,33 @@
+/* 无收货地址 */
+.noadd{
+  text-align: center;margin-top: 50%;color: #666;
+}
+/* 存在收货地址 */
+.wrapLi{
+  background-color: #fff;
+}
+.conent{
+ padding: 20rpx 5%;color: #222;font-weight: bold;
+ display: flex;align-items: center;
+ 
+}
+.conent .cLeft{
+  flex: 1;
+}
+.conent .cRight{
+  padding-left: 30rpx;
+}
+.conent .cTop{
+  margin-bottom: 10rpx;
+}
+.conent .tel{
+  font-weight: normal;margin-left: 30rpx;
+}
+.conent text{
+  margin-right: 10rpx;
+}
+.sidebasr{
+  background-color: red;
+  height: 100%;color: #fff;justify-content: center;
+  display: flex;align-items: center;
+}

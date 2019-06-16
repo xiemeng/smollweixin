@@ -1,0 +1,73 @@
+/* pages/foodDetail/detail/detail.wxss */
+/* 轮播图 */
+.detail{
+  padding-bottom:100rpx; 
+}
+swiper {
+  height: 300px;
+}
+.swipper image{
+  height: 100%;
+}
+/* 头部 */
+.header{
+  background-color: #fff;padding: 20rpx 5%;
+}
+.header .name{
+  font-weight: bold;margin-bottom: 10rpx;
+}
+.header .describe text{
+  margin-right: 20rpx;
+}
+/* 保证 */
+.promise{
+  background-color: #fff;padding: 20rpx 5%;margin-top: 20rpx;
+}
+.promise text{
+  margin-left: 10rpx;font-size: 12px;
+}
+/* 数量选择 */
+.purchase{
+ background-color: #fff;padding: 20rpx 5%;margin-top: 20rpx;margin-bottom: 20rpx;
+}
+.purchase .nums{
+  margin-bottom:20rpx;padding-bottom:20rpx;
+}
+/* 图文详情 */
+.graphic{
+  background-color: #fff;padding: 20rpx 5%;text-align: center;
+}
+.graphic .title{
+  margin-bottom:20rpx;
+}
+.graphic .introduce{
+  margin-top:20rpx;
+}
+/* 底部购物栏 */
+.shopping{
+  display: flex;text-align: center;
+  align-items:stretch;
+  width: 100%;color: #fff;
+  position: fixed;left:0;bottom: 0;
+}
+.shopping li{
+  flex: 1;padding: 10rpx 0;
+  align-items:stretch;
+  position: relative;
+}
+.shopping .mark{
+  background-color: red;
+   display: flex;align-items: center;justify-content:center;
+}
+.shopping .addCar{
+  background-color:#ff8b00;
+  display: flex;align-items: center;justify-content:center;
+}
+.shopping .common{
+  background-color: #eeeeee;color: #959595;font-size: 12px;
+}
+.shopping .common text{
+  position: absolute;right: 30%;top: 0;color: #fff;
+  width: 28rpx;height: 28rpx;border-radius: 50px;text-align: center;
+  line-height: 28rpx;background-color: red;font-size: 20rpx;
+}
