@@ -10,12 +10,12 @@ Page({
     isPage:false,//数据请求完再展示页面
   },
   addsite: function () {//新增
-    if (this.data.userinfo.length>=5){
+    if (this.data.userinfo.length>=10){
       this.setData({
         isAll:true
       })
       wx.showToast({
-        title: '最多只能添加5个地址',
+        title: '最多只能添加10个地址',
         icon:'none'
       })
     }else{

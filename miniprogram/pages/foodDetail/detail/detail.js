@@ -52,6 +52,7 @@ Page({
     for (let i = 0, length = this.data.carList.length;i<length;i++){
       if (this.data.mid == this.data.carList[i].mid){//存在，更改
         data.nums = data.nums + this.data.carList[i].nums;
+        console.log(this.data.carList[i])
         dbShopCar.doc(this.data.carList[i]._id).update({
           data: data,
           success:()=>{

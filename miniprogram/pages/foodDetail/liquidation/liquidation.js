@@ -1,5 +1,8 @@
 // pages/foodDetail/liquidation/liquidation.js
 import { store } from "../../../utils/store/index.js"
+const db = wx.cloud.database()//获取默认环境下的数据库引用
+const dbAddress = db.collection('address')//获取具体某一张表
+const app = getApp()
 Page({
 
   /**
@@ -9,6 +12,7 @@ Page({
     carList: [],//购物车数据
     allPrice:'',//总价
     postage:0,//邮费
+    userinfo:'',// 地址信息
   },
 
   /**
@@ -34,7 +38,22 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getData()
+  },
+  getData() {
+    dbAddress.where({ _openid: app.globalData.openid }).get({
+      success: (res) => {
+        console.log(res)
+        if(res && res.data && res.data.length>0){
+          this.setData({
+            userinfo: res.data[0]
+          })
+        }
+      },
+      fail: function (err) {
+        console.error(err)
+      }
+    })
   },
   /**
    * 用户点击右上角分享

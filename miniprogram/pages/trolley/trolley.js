@@ -27,21 +27,25 @@ Page({
     let allPrice = 0;
     let isAllSelect = true;
     for (let i = 0; i < newValue.length; i++) {
-      // delete newValue[i]._id
-      // delete newValue[i]._openid
-      // dbShopCar.doc(newValue[i]._id).update({
-      //   data: newValue[i],
-      //   success: () => {
-      //     console.log(i)
-      //   },
-      //   fail: (error) => {
-      //     console.error(error)
-      //   }
-      // })
+      console.log(newValue[i])
+      let deepValue = JSON.parse(JSON.stringify(newValue[i]))
+      delete deepValue._id
+      delete deepValue._openid
+      dbShopCar.doc(newValue[i]._id).update({
+        data: deepValue,
+        success: () => {
+          console.log(i)
+        },
+        fail: (error) => {
+          console.error(error)
+        }
+      })
+      
       if (!newValue[i].isSelect){
         isAllSelect = false;
       }else{
         allPrice = allPrice + (newValue[i].nums * newValue[i].price)
+        console.log(newValue[i].nums, newValue)
       }
     }
     this.setData({
@@ -122,6 +126,7 @@ Page({
               this.setData({
                 carList: this.data.carList
               })
+              this.getAllPrice(this.data.carList)
             },
             fail: (res) => {
               wx.showToast({

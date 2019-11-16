@@ -35,8 +35,9 @@
 				{
 					"id": 0,
 					"name": "db guide",
-					"pathName": "pages/classify/classify",
-					"query": ""
+					"pathName": "pages/trolley/trolley",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

@@ -45,10 +45,10 @@ Component({
         var myEventDetail = {
           val: this.data.value
         } // detail对象，提供给事件监听函数
-        this.triggerEvent('numData', myEventDetail)
+        
         this.data.datas.nums = this.data.value
         store.mutations('carList', this.data.datas, this.data.index)
-        
+        this.triggerEvent('numData', myEventDetail)
       } else {
         this.setData({
           value: this.data.value-1
@@ -56,10 +56,10 @@ Component({
         var myEventDetail = {
           val: this.data.value
         } // detail对象，提供给事件监听函数
-        this.triggerEvent('numData', myEventDetail)
+        
         this.data.datas.nums = this.data.value
         store.mutations('carList', this.data.datas, this.data.index)
-        
+        this.triggerEvent('numData', myEventDetail)
       }
     },
     adds(event) {
@@ -67,10 +67,10 @@ Component({
         var myEventDetail = {
           val: this.data.value
         } // detail对象，提供给事件监听函数
-        this.triggerEvent('numData', myEventDetail)
+        
         this.data.datas.nums = this.data.value
         store.mutations('carList', this.data.datas, this.data.index)
-        
+        this.triggerEvent('numData', myEventDetail)
       } else {
         this.setData({
           value: this.data.value+1
@@ -78,10 +78,10 @@ Component({
         var myEventDetail = {
           val: this.data.value
         } // detail对象，提供给事件监听函数
-        this.triggerEvent('numData', myEventDetail)
+        
         this.data.datas.nums = this.data.value
         store.mutations('carList', this.data.datas, this.data.index)
-        
+        this.triggerEvent('numData', myEventDetail)
       }
     }
   },

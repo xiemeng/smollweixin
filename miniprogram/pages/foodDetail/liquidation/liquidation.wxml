@@ -1,5 +1,9 @@
 <!-- 订单结算 -->
 <view class='trolley'>
+    <!-- 地址选择 -->
+    <view class='address'>
+      
+    </view>
     <!-- 购物车列表 -->
     <view class="shopCar {{index == carList.length-1?'':'vue-1px-b'}}" wx:for="{{carList}}" wx:key="_id">
       <view class="shopRight">
