@@ -5,9 +5,8 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-      // 'cloud://develop-7e9e98.6465-develop-7e9e98/imgs/commodity/ commodity_c10.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      'cloud://develop-7e9e98.6465-develop-7e9e98-1257774716/imgs/commodity/afd.jpg',
+      'cloud://develop-7e9e98.6465-develop-7e9e98-1257774716/imgs/commodity/acd.jpg'
     ],
     car: {
       autoplay: true,//是否自动切换  
@@ -34,9 +33,11 @@ Page({
     // console.log("current 改变时会触发 change 事件")
   },
   numData(event){//监听子组件传过来的事件
+    console.log(event)
     this.setData({
       nums: event.detail.val
     })
+   
   },
   addCar(){//加入购物车
     let data = {
@@ -47,8 +48,6 @@ Page({
       mid: this.data.mid,
       isSelect:true
     }
-    console.log(this.data.mid)
-    
     for (let i = 0, length = this.data.carList.length;i<length;i++){
       if (this.data.mid == this.data.carList[i].mid){//存在，更改
         data.nums = data.nums + this.data.carList[i].nums;
@@ -108,7 +107,6 @@ Page({
     const dbCommodity = db.collection('commodity')//获取具体某一张表
     dbCommodity.doc(options.id).get({
       success: (res) => {
-       console.log(res.data)
        this.setData({
          datainfo:res.data
        })

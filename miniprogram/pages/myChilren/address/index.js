@@ -52,6 +52,9 @@ Page({
     })
     console.log(event)
   },
+  choose (index) { // 选择地址
+    console.log(index)
+  },
   getData(callback){
     dbAddress.where({ _openid: app.globalData.openid }).get({
       success: (res) => {

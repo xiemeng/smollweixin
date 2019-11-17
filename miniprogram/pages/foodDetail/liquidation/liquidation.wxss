@@ -1,3 +1,28 @@
+/* 地址信息 */
+.address{
+  background-color: #fff;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.address .cLeft{
+  flex: 1;
+}
+.address .cRight{
+  
+}
+.address .cTop{
+  margin-bottom: 10rpx;
+}
+.address .tel{
+  font-weight: normal;margin-left: 30rpx;
+}
+.address text{
+  margin-right: 10rpx;
+}
 /* 购物车 */
 .trolley{
   padding-bottom: 104rpx;

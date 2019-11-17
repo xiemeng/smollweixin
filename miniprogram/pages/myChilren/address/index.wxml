@@ -2,7 +2,8 @@
   <!-- 存在收货地址 -->
   <view wx:if="{{isPage}}">
     <view wx:if="{{userinfo.length>=1}}">
-      <view class="wrapLi {{index == userinfo.length-1?'':'vue-1px-b'}}" wx:for="{{userinfo}}" wx:key="_id">
+      <view class="wrapLi {{index == userinfo.length-1?'':'vue-1px-b'}}" wx:for="{{userinfo}}" wx:key="_id" 
+      data-index="{{index}}" bindtap='choose'>
         <gesture>
           <view slot="conent" class='conent'>
             <view class='cLeft vue-1px-r'>

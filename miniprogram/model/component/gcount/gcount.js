@@ -4,7 +4,7 @@ Component({
     // 这里定义了innerText属性，属性值可以在组件使用时指定
     datas: {
       type: Object,
-      value: 'default value',
+      value: {},
     },
     index: {  //传进来的id
       type: [String, Number],
@@ -72,13 +72,14 @@ Component({
         store.mutations('carList', this.data.datas, this.data.index)
         this.triggerEvent('numData', myEventDetail)
       } else {
+        
         this.setData({
           value: this.data.value+1
         })
+       
         var myEventDetail = {
           val: this.data.value
         } // detail对象，提供给事件监听函数
-        
         this.data.datas.nums = this.data.value
         store.mutations('carList', this.data.datas, this.data.index)
         this.triggerEvent('numData', myEventDetail)

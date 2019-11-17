@@ -32,7 +32,6 @@ button::after{
 .white{
   color: #fff;
 }
-
 /*浮动和清除浮动  */
 .fl{
   float: left;
@@ -175,3 +174,10 @@ textarea{
 .icon-zhengpinbaozheng:before { content: "\e639"; }
 
 
+
+.icon-youjiantou{
+  font-size: 34rpx;
+  color: #999;
+  position: relative;
+  top: 2px;
+}

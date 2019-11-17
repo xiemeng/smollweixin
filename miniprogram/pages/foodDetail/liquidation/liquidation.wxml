@@ -1,9 +1,18 @@
 <!-- 订单结算 -->
 <view class='trolley'>
     <!-- 地址选择 -->
-    <view class='address'>
-      
-    </view>
+    <navigator url='/pages/myChilren/address/index' hover-class="navigator-hover">
+          <view class='address'>
+            <view class='cLeft'>
+              <view class='cTop'><text>{{userinfo.name}}</text><text class='tel'>{{userinfo.tel}}</text></view>
+              <view>
+                <text wx:for="{{userinfo.address}}" wx:for-item="item2" wx:key="{{index}}">{{item2}}</text>
+                <text>{{userinfo.detailAdd}}</text>
+              </view>
+            </view>
+            <view class='cRight'><i class="iconfont icon-youjiantou fr"></i></view>
+        </view>
+    </navigator>
     <!-- 购物车列表 -->
     <view class="shopCar {{index == carList.length-1?'':'vue-1px-b'}}" wx:for="{{carList}}" wx:key="_id">
       <view class="shopRight">

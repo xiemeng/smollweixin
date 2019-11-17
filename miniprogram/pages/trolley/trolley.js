@@ -11,12 +11,18 @@ Page({
   onShow:function(){//得到数据
     dbShopCar.where({ _openid: app.globalData.openid }).get({
       success: (res) => {
-        this.setData({
-          carList: res.data
-        })
+        console.log(res)
+        if(res && res.data && res.data.length>0){
+          this.setData({
+            carList: []
+          })
+          this.setData({
+            carList: res.data
+          })
+        }
+        
         store.mutations('carList', res.data)
         this.getAllPrice(res.data)
-        console.log(res.data)
       },
       fail: function (err) {
         console.error(err)
@@ -27,14 +33,13 @@ Page({
     let allPrice = 0;
     let isAllSelect = true;
     for (let i = 0; i < newValue.length; i++) {
-      console.log(newValue[i])
       let deepValue = JSON.parse(JSON.stringify(newValue[i]))
       delete deepValue._id
       delete deepValue._openid
       dbShopCar.doc(newValue[i]._id).update({
         data: deepValue,
         success: () => {
-          console.log(i)
+          
         },
         fail: (error) => {
           console.error(error)
@@ -45,7 +50,6 @@ Page({
         isAllSelect = false;
       }else{
         allPrice = allPrice + (newValue[i].nums * newValue[i].price)
-        console.log(newValue[i].nums, newValue)
       }
     }
     this.setData({
@@ -113,7 +117,7 @@ Page({
     let index = event.currentTarget.dataset.index;
     wx.showModal({
       title: '提示',
-      content: '确定删除购物车吗?',
+      content: '确定删除该物品吗?',
       success:(res)=>{
         if (res.confirm){
           dbShopCar.doc(id).remove({

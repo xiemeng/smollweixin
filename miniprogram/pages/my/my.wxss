@@ -32,6 +32,8 @@
   .tableList li{
     background-color: #fff;margin-top: 20rpx;
     padding: 30rpx 5%;
+    font-size: 36rpx;
+    line-height: 40rpx;
   }
   .tableList li .left{
     margin-right: 20rpx;color: #feaa00;
